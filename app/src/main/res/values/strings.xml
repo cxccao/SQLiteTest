@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SQLiteTest</string>
+    <string name="executeSQL">执行SQL</string>
+    <string name="inputSQL">请输入SQL语句</string>
+    <string name="insert">插入</string>
+    <string name="update">更新</string>
+    <string name="query1">数据查询</string>
+    <string name="query2">统计查询</string>
+    <string name="query3">比较查询</string>
+    <string name="delete">删除</string>
+    <string name="strSuccessSql">执行SQL语句成功</string>
+    <string name="strErrorSql">执行SQL语句失败，请检查语句是否有错误</string>
+</resources>
