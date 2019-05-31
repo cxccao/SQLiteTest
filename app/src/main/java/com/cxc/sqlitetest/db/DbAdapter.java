@@ -5,13 +5,14 @@ import android.view.*;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.cxc.sqlitetest.R;
+
 import java.util.List;
 
 public class DbAdapter extends BaseAdapter {
     private Context context;
     private List<Db> dbList;
 
-    public DbAdapter(Context context, List<Db> dbList){
+    DbAdapter(Context context, List<Db> dbList) {
         setContext(context);
         setDbList(dbList);
     }
@@ -39,21 +40,21 @@ public class DbAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Db db = dbList.get(position);
-        if(db==null) {
+        if (db == null) {
             return null;
         }
 
-        ViewHolder holder=null;
+        ViewHolder holder;
 
-        if (convertView != null) {
-            holder = (ViewHolder)convertView.getTag();
-        }else {
-            convertView =LayoutInflater.from(context).inflate(R.layout.show_item_layout,null);
+        if (null != convertView) {
+            holder = (ViewHolder) convertView.getTag();
+        } else {
+            convertView = LayoutInflater.from(context).inflate(R.layout.show_item_layout, null);
             holder = new ViewHolder();
-            holder.dataIdView=convertView.findViewById(R.id.dataIdView);
+            holder.dataIdView = convertView.findViewById(R.id.dataIdView);
             holder.dataNameView = convertView.findViewById(R.id.dataNameView);
             holder.dataPriceView = convertView.findViewById(R.id.dataPriceView);
-            holder.dataCountryView=convertView.findViewById(R.id.dataCountryView);
+            holder.dataCountryView = convertView.findViewById(R.id.dataCountryView);
             convertView.setTag(holder);
         }
 
@@ -68,7 +69,7 @@ public class DbAdapter extends BaseAdapter {
         return context;
     }
 
-    public void setContext(Context context) {
+    private void setContext(Context context) {
         this.context = context;
     }
 
@@ -76,15 +77,14 @@ public class DbAdapter extends BaseAdapter {
         return dbList;
     }
 
-    public void setDbList(List<Db> dbList) {
+    private void setDbList(List<Db> dbList) {
         this.dbList = dbList;
     }
 
-    static class ViewHolder{
+    static class ViewHolder {
         TextView dataIdView;
         TextView dataNameView;
         TextView dataPriceView;
         TextView dataCountryView;
-
     }
 }

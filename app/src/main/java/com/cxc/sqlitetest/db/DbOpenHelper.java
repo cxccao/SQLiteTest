@@ -8,13 +8,12 @@ public class DbOpenHelper extends SQLiteOpenHelper {
 
     private static final int DB_VERSION = 1;
     private static final String DB_NAME = "mydatabase.db";
-    public static final String TABLE_NAME = "Db";
+    static final String TABLE_NAME = "Db";
 
-    public DbOpenHelper(Context context) {
+    DbOpenHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
-
-
+    
     @Override
     public void onCreate(SQLiteDatabase db) {
         String sql = "create table if not exists " + TABLE_NAME + "(Id integer primary key, Name text, Price integer, Country text)";

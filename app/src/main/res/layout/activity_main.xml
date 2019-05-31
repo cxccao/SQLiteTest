@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".db.DbActivity">
 
     <Button
         android:id="@+id/executeBtn"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toTopOf="@+id/deleteBtn" />
 
     <Button
-        android:id="@+id/query1Btn"
+        android:id="@+id/queryBtn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -65,7 +65,7 @@
         android:layout_marginEnd="8dp"
         android:text="@string/query2"
         app:layout_constraintEnd_toStartOf="@+id/queryBtn3"
-        app:layout_constraintStart_toEndOf="@+id/query1Btn"
+        app:layout_constraintStart_toEndOf="@+id/queryBtn1"
         app:layout_constraintTop_toBottomOf="@+id/deleteBtn" />
 
     <Button
@@ -107,7 +107,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/inputSQL"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/executeBtn"
         app:layout_constraintStart_toStartOf="parent"

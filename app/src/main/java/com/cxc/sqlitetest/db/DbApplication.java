@@ -6,7 +6,7 @@ public class DbApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        if(!DbContext.isInitialized()){
+        if (!DbContext.isInitialized()) {
             DbContext.init(getApplicationContext());
         }
     }

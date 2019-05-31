@@ -1,13 +1,20 @@
 <resources>
-    <string name="app_name">SQLiteTest</string>
+    <string name="app_name">简易商品管理</string>
     <string name="executeSQL">执行SQL</string>
-    <string name="inputSQL">请输入SQL语句</string>
+    <string name="inputSQL">请输入SQL语句(不包括select)</string>
     <string name="insert">插入</string>
     <string name="update">更新</string>
-    <string name="query1">数据查询</string>
-    <string name="query2">统计查询</string>
-    <string name="query3">比较查询</string>
+    <string name="query1">提供者查询</string>
+    <string name="query2">价格区间查询</string>
+    <string name="query3">查询所有</string>
     <string name="delete">删除</string>
     <string name="strSuccessSql">执行SQL语句成功</string>
     <string name="strErrorSql">执行SQL语句失败，请检查语句是否有错误</string>
+    <string name="unsupportedSelect">暂不支持select语句</string>
+    <string name="dash">-</string>
+    <string name="id">商品Id</string>
+    <string name="name">提供者姓名</string>
+    <string name="price">商品价格</string>
+    <string name="country">商品产地</string>
+    <string name="firstRun">初次使用，欢迎</string>
 </resources>

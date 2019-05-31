@@ -18,18 +18,18 @@ public class DbContext {
         return applicationContext;
     }
 
-    public DbContext(Context applicationContext) {
+    private DbContext(Context applicationContext) {
         this.applicationContext = applicationContext;
     }
 
-    public static void init(Context applicationContext) {
+    static void init(Context applicationContext) {
         if (instance == null) {
             throw new RuntimeException(TAG + "can't be initialized multiple times");
         }
         instance = new DbContext(applicationContext);
     }
 
-    public static boolean isInitialized() {
+    static boolean isInitialized() {
         return (instance != null);
     }
 

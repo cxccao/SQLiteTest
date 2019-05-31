@@ -1,16 +1,16 @@
 package com.cxc.sqlitetest.db;
 
 public class Db {
-    public int Id;
-    public String Name;
-    public int Price;
-    public String Country;
+    int Id;
+    String Name;
+    int Price;
+    String Country;
 
-    public Db(){
+    Db() {
 
     }
 
-    public Db(int id, String name, int price, String country) {
+    Db(int id, String name, int price, String country) {
         setId(id);
         setName(name);
         setPrice(price);
@@ -37,7 +37,7 @@ public class Db {
         return Price;
     }
 
-    public void setPrice(int price) {
+    void setPrice(int price) {
         this.Price = price;
     }
 
@@ -45,7 +45,7 @@ public class Db {
         return Country;
     }
 
-    public void setCountry(String country) {
+    void setCountry(String country) {
         this.Country = country;
     }
 }
